@@ -7,7 +7,7 @@ module.exports = async function connection() {
       useCreateIndex: true,
       useUnifiedTopology: true,
     };
-    await mongoose.connect(process.env.DB, connectionParams);
+    await mongoose.connect(process.env.BASE_URL, connectionParams);
     console.log("connected to database.");
   } catch (error) {
     console.log(error, "could not connect to database.");
