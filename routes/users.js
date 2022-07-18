@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User, validate } = require("../models/user");
 const Token = require("../models/token");
 const crypto = require("crypto");
-const sendEmail = require("../utils/sendEmail");
+const sendEmail = require("../utils/email");
 const bcrypt = require("bcrypt");
 
 router.post("/", async (req, res) => {
